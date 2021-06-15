@@ -83,7 +83,7 @@ namespace GoOS
                 Console.WriteLine(" ");
                 Console.WriteLine("Goplex Studios GoOS 1.0");
                 Console.WriteLine("Build type: Release");
-                Console.WriteLine("Build number: 280");
+                Console.WriteLine("Build number: 285");
                 Console.WriteLine("Build Support key: 0x8374652981");
                 Console.WriteLine(" ");
             }
@@ -163,7 +163,7 @@ namespace GoOS
                     Console.ReadLine();
                 }
             }
-            else if (input.ToLower() == "test15551userinterface1.0")
+            else if (input.ToLower() == "What if i told you... this is a UI command. But, this command wont work in console ;)")
             {
                 Canvas canvas;
                 canvas = FullScreenCanvas.GetFullScreenCanvas();
