@@ -168,7 +168,7 @@ namespace GoOS
                     Console.ReadLine();
                 }
             }
-            else if (input.ToLower() == "Test")
+            else if (input.ToLower() == "test")
             {
                 Console.WriteLine("Test");
             }
