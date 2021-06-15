@@ -1,1 +1,0 @@
-c:\users\emile\documents\visual studio 2013\Projects\YouTubeCosmosOSTutorial\YouTubeCosmosOSTutorial\obj\Debug\YouTubeCosmosOSTutorialBoot.CosmosResolveAssemblyReference.cache

@@ -2,17 +2,17 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Cosmos.Build/0.1.0-localbuild20200708061311": {
+      "Cosmos.Build/0.1.0-localbuild20210615051228": {
         "type": "package",
         "build": {
           "build/Cosmos.Build.props": {},
           "build/Cosmos.Build.targets": {}
         }
       },
-      "Cosmos.Common/0.1.0-localbuild20200708061311": {
+      "Cosmos.Common/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311"
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.Common.dll": {}
@@ -21,11 +21,11 @@
           "lib/netstandard2.0/Cosmos.Common.dll": {}
         }
       },
-      "Cosmos.Core/0.1.0-localbuild20200708061311": {
+      "Cosmos.Core/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311",
-          "IL2CPU.API": "0.1.0-localbuild20200708061311"
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228",
+          "IL2CPU.API": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.Core.dll": {}
@@ -34,7 +34,7 @@
           "lib/netstandard2.0/Cosmos.Core.dll": {}
         }
       },
-      "Cosmos.Debug.Kernel/0.1.0-localbuild20200708061311": {
+      "Cosmos.Debug.Kernel/0.1.0-localbuild20210615051228": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Cosmos.Debug.Kernel.dll": {}
@@ -43,13 +43,13 @@
           "lib/netstandard2.0/Cosmos.Debug.Kernel.dll": {}
         }
       },
-      "Cosmos.HAL2/0.1.0-localbuild20200708061311": {
+      "Cosmos.HAL2/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Common": "0.1.0-localbuild20200708061311",
-          "Cosmos.Core": "0.1.0-localbuild20200708061311",
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311",
-          "IL2CPU.API": "0.1.0-localbuild20200708061311"
+          "Cosmos.Common": "0.1.0-localbuild20210615051228",
+          "Cosmos.Core": "0.1.0-localbuild20210615051228",
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228",
+          "IL2CPU.API": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.HAL2.dll": {}
@@ -58,13 +58,13 @@
           "lib/netstandard2.0/Cosmos.HAL2.dll": {}
         }
       },
-      "Cosmos.System2/0.1.0-localbuild20200708061311": {
+      "Cosmos.System2/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Common": "0.1.0-localbuild20200708061311",
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311",
-          "Cosmos.HAL2": "0.1.0-localbuild20200708061311",
-          "IL2CPU.API": "0.1.0-localbuild20200708061311"
+          "Cosmos.Common": "0.1.0-localbuild20210615051228",
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228",
+          "Cosmos.HAL2": "0.1.0-localbuild20210615051228",
+          "IL2CPU.API": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.System2.dll": {}
@@ -73,7 +73,7 @@
           "lib/netstandard2.0/Cosmos.System2.dll": {}
         }
       },
-      "IL2CPU.API/0.1.0-localbuild20200708061311": {
+      "IL2CPU.API/0.1.0-localbuild20210615051228": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/IL2CPU.API.dll": {}
@@ -279,17 +279,17 @@
       }
     },
     ".NETCoreApp,Version=v2.0/cosmos": {
-      "Cosmos.Build/0.1.0-localbuild20200708061311": {
+      "Cosmos.Build/0.1.0-localbuild20210615051228": {
         "type": "package",
         "build": {
           "build/Cosmos.Build.props": {},
           "build/Cosmos.Build.targets": {}
         }
       },
-      "Cosmos.Common/0.1.0-localbuild20200708061311": {
+      "Cosmos.Common/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311"
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.Common.dll": {}
@@ -298,11 +298,11 @@
           "lib/netstandard2.0/Cosmos.Common.dll": {}
         }
       },
-      "Cosmos.Core/0.1.0-localbuild20200708061311": {
+      "Cosmos.Core/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311",
-          "IL2CPU.API": "0.1.0-localbuild20200708061311"
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228",
+          "IL2CPU.API": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.Core.dll": {}
@@ -311,7 +311,7 @@
           "lib/netstandard2.0/Cosmos.Core.dll": {}
         }
       },
-      "Cosmos.Debug.Kernel/0.1.0-localbuild20200708061311": {
+      "Cosmos.Debug.Kernel/0.1.0-localbuild20210615051228": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Cosmos.Debug.Kernel.dll": {}
@@ -320,13 +320,13 @@
           "lib/netstandard2.0/Cosmos.Debug.Kernel.dll": {}
         }
       },
-      "Cosmos.HAL2/0.1.0-localbuild20200708061311": {
+      "Cosmos.HAL2/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Common": "0.1.0-localbuild20200708061311",
-          "Cosmos.Core": "0.1.0-localbuild20200708061311",
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311",
-          "IL2CPU.API": "0.1.0-localbuild20200708061311"
+          "Cosmos.Common": "0.1.0-localbuild20210615051228",
+          "Cosmos.Core": "0.1.0-localbuild20210615051228",
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228",
+          "IL2CPU.API": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.HAL2.dll": {}
@@ -335,13 +335,13 @@
           "lib/netstandard2.0/Cosmos.HAL2.dll": {}
         }
       },
-      "Cosmos.System2/0.1.0-localbuild20200708061311": {
+      "Cosmos.System2/0.1.0-localbuild20210615051228": {
         "type": "package",
         "dependencies": {
-          "Cosmos.Common": "0.1.0-localbuild20200708061311",
-          "Cosmos.Debug.Kernel": "0.1.0-localbuild20200708061311",
-          "Cosmos.HAL2": "0.1.0-localbuild20200708061311",
-          "IL2CPU.API": "0.1.0-localbuild20200708061311"
+          "Cosmos.Common": "0.1.0-localbuild20210615051228",
+          "Cosmos.Debug.Kernel": "0.1.0-localbuild20210615051228",
+          "Cosmos.HAL2": "0.1.0-localbuild20210615051228",
+          "IL2CPU.API": "0.1.0-localbuild20210615051228"
         },
         "compile": {
           "lib/netstandard2.0/Cosmos.System2.dll": {}
@@ -350,7 +350,7 @@
           "lib/netstandard2.0/Cosmos.System2.dll": {}
         }
       },
-      "IL2CPU.API/0.1.0-localbuild20200708061311": {
+      "IL2CPU.API/0.1.0-localbuild20210615051228": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/IL2CPU.API.dll": {}
@@ -805,17 +805,17 @@
     }
   },
   "libraries": {
-    "Cosmos.Build/0.1.0-localbuild20200708061311": {
-      "sha512": "HKEksyzBmQ1eevKeQwTufdbRoEGxIJy4pCCfYtP3aAnN3KwDSzIjN4b3hQaahE4zu05HGEFZfr/w8LL8w8YB/Q==",
+    "Cosmos.Build/0.1.0-localbuild20210615051228": {
+      "sha512": "QKxueLdRBdqeWNZ0nijv8o9RzuY94OfuiD/YC4rnmoFatiyASGWVGJI+PTYKA3lpTJzrxrQQmfL3NgJVva/Zxw==",
       "type": "package",
-      "path": "cosmos.build/0.1.0-localbuild20200708061311",
+      "path": "cosmos.build/0.1.0-localbuild20210615051228",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         "LICENSE.txt",
         "build/Cosmos.Build.props",
         "build/Cosmos.Build.targets",
-        "cosmos.build.0.1.0-localbuild20200708061311.nupkg.sha512",
+        "cosmos.build.0.1.0-localbuild20210615051228.nupkg.sha512",
         "cosmos.build.nuspec",
         "runtime.json",
         "tools/Cosmos.Build.Common.dll",
@@ -876,77 +876,77 @@
         "tools/x86/e_sqlite3.dll"
       ]
     },
-    "Cosmos.Common/0.1.0-localbuild20200708061311": {
-      "sha512": "OYMKJtjDhY+JvFieP6xQbhsZonbD7rM2TPv8jcxfCTCZfLQ0d4eaBD8fpdPnDPKAosTRW3Vhk/lgcUSvi3jQTA==",
+    "Cosmos.Common/0.1.0-localbuild20210615051228": {
+      "sha512": "MoFqxAZ3dMwzvHHy6hR8Qoq14ZNfirT6DXW0oXZ1Mw2t3ztWTONNQAF/DBAsGi95dPuqCh6WDsJWbOXQztzmFg==",
       "type": "package",
-      "path": "cosmos.common/0.1.0-localbuild20200708061311",
+      "path": "cosmos.common/0.1.0-localbuild20210615051228",
       "files": [
         ".nupkg.metadata",
         "LICENSE.txt",
-        "cosmos.common.0.1.0-localbuild20200708061311.nupkg.sha512",
+        "cosmos.common.0.1.0-localbuild20210615051228.nupkg.sha512",
         "cosmos.common.nuspec",
         "lib/netstandard2.0/Cosmos.Common.dll"
       ]
     },
-    "Cosmos.Core/0.1.0-localbuild20200708061311": {
-      "sha512": "XJf6t+jcl5lI7IGAST6jK23PdNXivWVo4AVni+cmg82BvfZjVKO6IYXo1nWKuaJw0CWWFBY8BWkmK+cZRlmgFg==",
+    "Cosmos.Core/0.1.0-localbuild20210615051228": {
+      "sha512": "G5TAlJAmnY8tO4OMd8e75jHUfJOnnmRpjNgQgFAQqloDwp+QoupIC6ETRaekb5nnU/nTy4/uPyDUt6Nr59MIhw==",
       "type": "package",
-      "path": "cosmos.core/0.1.0-localbuild20200708061311",
+      "path": "cosmos.core/0.1.0-localbuild20210615051228",
       "files": [
         ".nupkg.metadata",
         "LICENSE.txt",
-        "cosmos.core.0.1.0-localbuild20200708061311.nupkg.sha512",
+        "cosmos.core.0.1.0-localbuild20210615051228.nupkg.sha512",
         "cosmos.core.nuspec",
         "lib/netstandard2.0/Cosmos.Core.dll",
         "lib/netstandard2.0/Cosmos.Core.xml"
       ]
     },
-    "Cosmos.Debug.Kernel/0.1.0-localbuild20200708061311": {
-      "sha512": "x5uz5lsFhh/k7mRWCh4C+IvqN3A/onvsTCQRVtSZzORYdVgMilHoemRPmd2bbCcOOVKsL/POWU6t9SMy8+6+Ew==",
+    "Cosmos.Debug.Kernel/0.1.0-localbuild20210615051228": {
+      "sha512": "EHjsZdgNnnY2eU8Lq813r/mQAU8k/aNnGLTZwu3D5Xx5iTwXYFogSGgUvlAW5/qrUZVI+iUQFXER+sWhaF80MA==",
       "type": "package",
-      "path": "cosmos.debug.kernel/0.1.0-localbuild20200708061311",
+      "path": "cosmos.debug.kernel/0.1.0-localbuild20210615051228",
       "files": [
         ".nupkg.metadata",
         "LICENSE.txt",
-        "cosmos.debug.kernel.0.1.0-localbuild20200708061311.nupkg.sha512",
+        "cosmos.debug.kernel.0.1.0-localbuild20210615051228.nupkg.sha512",
         "cosmos.debug.kernel.nuspec",
         "lib/netstandard2.0/Cosmos.Debug.Kernel.dll",
         "lib/netstandard2.0/Cosmos.Debug.Kernel.xml"
       ]
     },
-    "Cosmos.HAL2/0.1.0-localbuild20200708061311": {
-      "sha512": "8Su+2jLAS8M7X8N/TfP/CygVIfPqX526+uUucXR2LdLXTHhks/ZVnTbOr5OBXL7ZgdkVmmh97oothWHghtce/A==",
+    "Cosmos.HAL2/0.1.0-localbuild20210615051228": {
+      "sha512": "544aAgDDlho9/TkXVyVoP11hWkBeeg+4q6k73CRHenFd/ptdFnWBvipr80tGaumWyXurVla2AeDKa38Azn4GCg==",
       "type": "package",
-      "path": "cosmos.hal2/0.1.0-localbuild20200708061311",
+      "path": "cosmos.hal2/0.1.0-localbuild20210615051228",
       "files": [
         ".nupkg.metadata",
         "LICENSE.txt",
-        "cosmos.hal2.0.1.0-localbuild20200708061311.nupkg.sha512",
+        "cosmos.hal2.0.1.0-localbuild20210615051228.nupkg.sha512",
         "cosmos.hal2.nuspec",
         "lib/netstandard2.0/Cosmos.HAL2.dll",
         "lib/netstandard2.0/Cosmos.HAL2.xml"
       ]
     },
-    "Cosmos.System2/0.1.0-localbuild20200708061311": {
-      "sha512": "k/Wnzv6XLVgDnaRZztQiBJwGuN3BYtuIfwBBEfHjX+Z5z0PiAu/w6aBZX5hv9NoJk+cdoRrtPD9Vs0/Bk7efTg==",
+    "Cosmos.System2/0.1.0-localbuild20210615051228": {
+      "sha512": "8+1rGIXdh7WSa6Glf005iyPkQbpI38mJuYUZsussh612AAfi/BpMPmXHiQjngZKQyRyGQ5+IpPLWe+et8jBgXg==",
       "type": "package",
-      "path": "cosmos.system2/0.1.0-localbuild20200708061311",
+      "path": "cosmos.system2/0.1.0-localbuild20210615051228",
       "files": [
         ".nupkg.metadata",
         "LICENSE.txt",
-        "cosmos.system2.0.1.0-localbuild20200708061311.nupkg.sha512",
+        "cosmos.system2.0.1.0-localbuild20210615051228.nupkg.sha512",
         "cosmos.system2.nuspec",
         "lib/netstandard2.0/Cosmos.System2.dll",
         "lib/netstandard2.0/Cosmos.System2.xml"
       ]
     },
-    "IL2CPU.API/0.1.0-localbuild20200708061311": {
-      "sha512": "MjCeYU0vQTwNVpe1RpRUnCdvN0OeNH+WhbYKSyvf00kqVMFM1CUe1OSzfDKBzEo4syFeXdg0txi4Ys5wB8h9cw==",
+    "IL2CPU.API/0.1.0-localbuild20210615051228": {
+      "sha512": "abapbNv6+aPZclfRr6PXGskEDPs+4BAQS75KG8Ae6iSBOTnL4imfDjzAsf+aypBpX4mBXyc+YjBzSoFpqrSEnQ==",
       "type": "package",
-      "path": "il2cpu.api/0.1.0-localbuild20200708061311",
+      "path": "il2cpu.api/0.1.0-localbuild20210615051228",
       "files": [
         ".nupkg.metadata",
-        "il2cpu.api.0.1.0-localbuild20200708061311.nupkg.sha512",
+        "il2cpu.api.0.1.0-localbuild20210615051228.nupkg.sha512",
         "il2cpu.api.nuspec",
         "lib/netstandard2.0/IL2CPU.API.dll"
       ]
@@ -1699,7 +1699,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ybeny\\.nuget\\packages\\": {}
+    "C:\\Users\\ybeny\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "0.0.1",
@@ -1710,8 +1711,12 @@
       "packagesPath": "C:\\Users\\ybeny\\.nuget\\packages\\",
       "outputPath": "D:\\Users\\ybeny\\source\\repos\\GoOS\\GoOS\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\ybeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
