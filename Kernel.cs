@@ -46,10 +46,9 @@ namespace GoOS
                 Console.WriteLine("- sysinf - Shows system info             -");
                 Console.WriteLine("- shutdown - Shuts down GoOS             -");
                 Console.WriteLine("- whatsnew - shows all new features      -");
-                Console.WriteLine("- run* - run an application              -");
+                Console.WriteLine("- gocalc - GoOS calculator               -");
+                Console.WriteLine("- goui - Goplex GUI tests                -");
                 Console.WriteLine("------------------------------------------");
-                Console.WriteLine("if a command has a * after it, it means you need to use " +
-                    "arguments to control it");
                 Console.WriteLine(" ");
             }
             else if (input.ToLower() == "credits")
@@ -84,7 +83,7 @@ namespace GoOS
                 Console.WriteLine(" ");
                 Console.WriteLine("Goplex Studios GoOS 1.0");
                 Console.WriteLine("Build type: Development");
-                Console.WriteLine("Build number: 135");
+                Console.WriteLine("Build number: 215");
                 Console.WriteLine("Build Support key: 0x9282635467");
                 Console.WriteLine(" ");
             }
@@ -102,13 +101,12 @@ namespace GoOS
             }
             else if (input.ToLower() == "whatsnew")
             {
-                Console.WriteLine("Yo there user! welcome to GoOS DevR 2");
+                Console.WriteLine("Yo there user! welcome to GoOS DevR 3");
                 Console.WriteLine("Whats new? well heres a list:");
-                Console.WriteLine("- Added Whats New command");
-                Console.WriteLine("- Removed the UItest command");
-                Console.WriteLine("- added OS build number to system info");
-                Console.WriteLine("- added GoCalc as an application");
-                Console.WriteLine("- added the run command for applications");
+                Console.WriteLine("- Added GoUI back for testing");
+                Console.WriteLine("- removed run as a command");
+                Console.WriteLine("- all apps are now listed in the Help command.");
+                Console.WriteLine("- Project is now open sourced.");
             }
             else if (input.ToLower() == "gocalc")
             {
@@ -168,9 +166,26 @@ namespace GoOS
                     Console.ReadLine();
                 }
             }
-            else if (input.ToLower() == "test")
+            else if (input.ToLower() == "goui")
             {
-                Console.WriteLine("Test");
+                Canvas canvas;
+                canvas = FullScreenCanvas.GetFullScreenCanvas();
+                Pen pen = new Pen(System.Drawing.Color.Red);
+                canvas.DrawPoint(pen, 69, 69);
+                pen.Color = System.Drawing.Color.GreenYellow;
+                canvas.DrawLine(pen, 250, 100, 400, 100);
+                pen.Color = System.Drawing.Color.IndianRed;
+                canvas.DrawLine(pen, 350, 150, 350, 250);
+                pen.Color = System.Drawing.Color.MintCream;
+                canvas.DrawLine(pen, 250, 150, 400, 250);
+                pen.Color = System.Drawing.Color.PaleVioletRed;
+                canvas.DrawRectangle(pen, 350, 350, 80, 60);
+                Console.ReadKey();
+                canvas.Mode = new Mode(800, 600, ColorDepth.ColorDepth32);
+                pen.Color = System.Drawing.Color.LimeGreen;
+                canvas.DrawRectangle(pen, 450, 450, 80, 60);
+                Console.ReadKey();
+                Stop();
             }
             else
             {
