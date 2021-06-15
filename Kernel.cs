@@ -82,9 +82,9 @@ namespace GoOS
             {
                 Console.WriteLine(" ");
                 Console.WriteLine("Goplex Studios GoOS 1.0");
-                Console.WriteLine("Build type: Development");
-                Console.WriteLine("Build number: 215");
-                Console.WriteLine("Build Support key: 0x9282635467");
+                Console.WriteLine("Build type: Release");
+                Console.WriteLine("Build number: 280");
+                Console.WriteLine("Build Support key: 0x8374652981");
                 Console.WriteLine(" ");
             }
             else if (input.ToLower() == "shutdown")
