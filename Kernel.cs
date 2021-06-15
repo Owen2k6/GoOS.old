@@ -19,8 +19,8 @@ namespace GoOS
             
             Console.Clear();
             Cosmos.HAL.Global.TextScreen.SetColors(ConsoleColor.Black, ConsoleColor.White);
-            Console.WriteLine("   Goplex Studios");
-            Console.WriteLine("   Development Release 3");
+            Console.WriteLine("   Goplex Studios - GoOS");
+            Console.WriteLine("   Version 1.0");
             Console.WriteLine("   ");
             Console.WriteLine("   Type HELP for a list of commands");
             Console.WriteLine("   Type SUPPORT for support links...");
@@ -47,9 +47,9 @@ namespace GoOS
                 Console.WriteLine("- shutdown - Shuts down GoOS             -");
                 Console.WriteLine("- whatsnew - shows all new features      -");
                 Console.WriteLine("- gocalc - GoOS calculator               -");
-                Console.WriteLine("- goui - Goplex GUI tests                -");
                 Console.WriteLine("------------------------------------------");
                 Console.WriteLine(" ");
+                //
             }
             else if (input.ToLower() == "credits")
             {
@@ -101,12 +101,9 @@ namespace GoOS
             }
             else if (input.ToLower() == "whatsnew")
             {
-                Console.WriteLine("Yo there user! welcome to GoOS DevR 3");
+                Console.WriteLine("Yo there user! welcome to GoOS 1.0");
                 Console.WriteLine("Whats new? well heres a list:");
-                Console.WriteLine("- Added GoUI back for testing");
-                Console.WriteLine("- removed run as a command");
-                Console.WriteLine("- all apps are now listed in the Help command.");
-                Console.WriteLine("- Project is now open sourced.");
+                Console.WriteLine("- First public release. its all new!");
             }
             else if (input.ToLower() == "gocalc")
             {
@@ -166,7 +163,7 @@ namespace GoOS
                     Console.ReadLine();
                 }
             }
-            else if (input.ToLower() == "goui")
+            else if (input.ToLower() == "test15551userinterface1.0")
             {
                 Canvas canvas;
                 canvas = FullScreenCanvas.GetFullScreenCanvas();
