@@ -163,27 +163,6 @@ namespace GoOS
                     Console.ReadLine();
                 }
             }
-            else if (input.ToLower() == "What if i told you... this is a UI command. But, this command wont work in console ;)")
-            {
-                Canvas canvas;
-                canvas = FullScreenCanvas.GetFullScreenCanvas();
-                Pen pen = new Pen(System.Drawing.Color.Red);
-                canvas.DrawPoint(pen, 69, 69);
-                pen.Color = System.Drawing.Color.GreenYellow;
-                canvas.DrawLine(pen, 250, 100, 400, 100);
-                pen.Color = System.Drawing.Color.IndianRed;
-                canvas.DrawLine(pen, 350, 150, 350, 250);
-                pen.Color = System.Drawing.Color.MintCream;
-                canvas.DrawLine(pen, 250, 150, 400, 250);
-                pen.Color = System.Drawing.Color.PaleVioletRed;
-                canvas.DrawRectangle(pen, 350, 350, 80, 60);
-                Console.ReadKey();
-                canvas.Mode = new Mode(800, 600, ColorDepth.ColorDepth32);
-                pen.Color = System.Drawing.Color.LimeGreen;
-                canvas.DrawRectangle(pen, 450, 450, 80, 60);
-                Console.ReadKey();
-                Stop();
-            }
             else
             {
                 Console.WriteLine("sorry, but `" + input + "` is not a command");
