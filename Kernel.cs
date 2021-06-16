@@ -20,7 +20,7 @@ namespace GoOS
             Console.Clear();
             Cosmos.HAL.Global.TextScreen.SetColors(ConsoleColor.Black, ConsoleColor.White);
             Console.WriteLine("   Goplex Studios - GoOS");
-            Console.WriteLine("   Version 1.0");
+            Console.WriteLine("   Version 1.0.2");
             Console.WriteLine("   ");
             Console.WriteLine("   Type HELP for a list of commands");
             Console.WriteLine("   Type SUPPORT for support links...");
