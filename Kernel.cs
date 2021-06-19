@@ -29,27 +29,14 @@ namespace GoOS
             Console.WriteLine("   Type HELP for a list of commands");
             Console.WriteLine("   Type SUPPORT for support links...");
             Console.WriteLine(" ");
-            string[] filePaths = Directory.GetFiles(@"0:\");
             var drive = new DriveInfo("0");
             Console.WriteLine("Volume in drive 0 is " + $"{drive.VolumeLabel}");
             Console.WriteLine("Directory of " + @"0:\");
             Console.WriteLine("\n");
-            for (int i = 0; i < filePaths.Length; ++i)
-            {
-                string path = filePaths[i];
-                Console.WriteLine(System.IO.Path.GetFileName(path));
-            }
-            foreach (var d in System.IO.Directory.GetDirectories(@"0:\"))
-            {
-                var dir = new DirectoryInfo(d);
-                var dirName = dir.Name;
-
-                Console.WriteLine(dirName + " <DIR>");
-            }
             Console.WriteLine("\n");
             Console.WriteLine("        " + $"{drive.TotalSize}" + " bytes");
             Console.WriteLine("        " + $"{drive.AvailableFreeSpace}" + " bytes free");
-            Console.Write("> ");
+            Console.Write(@"0:\ ");
             try
             {
                 Sys.FileSystem.VFS.VFSManager.CreateFile(@"0:\BootSuccess.txt");
@@ -63,7 +50,7 @@ namespace GoOS
 
         protected override void Run()
         {
-            String prefix = "> ";
+            String prefix = @"0:\ ";
             String input = Console.ReadLine();
 
 
@@ -119,7 +106,7 @@ namespace GoOS
                 Console.WriteLine(" ");
                 Console.WriteLine("Goplex Studios GoOS 1.0.2");
                 Console.WriteLine("Build type: Release");
-                Console.WriteLine("Build number: 312");
+                Console.WriteLine("Build number: 1012");
                 Console.WriteLine("Build Support key: 0x6574837632");
                 Console.WriteLine(" ");
             }
@@ -144,6 +131,24 @@ namespace GoOS
             else if (input.ToLower() == "gocalc")
             {
                 Console.Write("Disabled.");
+                
+            }
+            else if (input.ToLower() == "dir")
+            {
+                string[] filePaths = Directory.GetFiles(@"0:\");
+                for (int i = 0; i < filePaths.Length; ++i)
+                {
+                    string path = filePaths[i];
+                    Console.WriteLine(System.IO.Path.GetFileName(path));
+                }
+                foreach (var d in System.IO.Directory.GetDirectories(@"0:\"))
+                {
+                    var dir = new DirectoryInfo(d);
+                    var dirName = dir.Name;
+
+                    Console.WriteLine(dirName + " <DIR>");
+                }
+
             }
             else
             {
