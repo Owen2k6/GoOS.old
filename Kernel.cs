@@ -4,19 +4,23 @@ using System.Text;
 using Sys = Cosmos.System;
 using Cosmos.Core;
 using Cosmos.System.Graphics;
+using Cosmos.System.FileSystem;
+using Cosmos.System.FileSystem.VFS;
 using Cosmos.Debug.Kernel;
 using Cosmos.HAL.Drivers.PCI.Video;
+using System.IO;
 
 namespace GoOS
 {
-
-
     public class Kernel : Sys.Kernel
     {
         public static VGAScreen VScreen = new VGAScreen();
+        CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
         protected override void BeforeRun()
         {
-            
+
+            var fs = new Sys.FileSystem.CosmosVFS();
+            Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
             Console.Clear();
             Cosmos.HAL.Global.TextScreen.SetColors(ConsoleColor.Black, ConsoleColor.White);
             Console.WriteLine("   Goplex Studios - GoOS");
@@ -25,13 +29,45 @@ namespace GoOS
             Console.WriteLine("   Type HELP for a list of commands");
             Console.WriteLine("   Type SUPPORT for support links...");
             Console.WriteLine(" ");
+            string[] filePaths = Directory.GetFiles(@"0:\");
+            var drive = new DriveInfo("0");
+            Console.WriteLine("Volume in drive 0 is " + $"{drive.VolumeLabel}");
+            Console.WriteLine("Directory of " + @"0:\");
+            Console.WriteLine("\n");
+            for (int i = 0; i < filePaths.Length; ++i)
+            {
+                string path = filePaths[i];
+                Console.WriteLine(System.IO.Path.GetFileName(path));
+            }
+            foreach (var d in System.IO.Directory.GetDirectories(@"0:\"))
+            {
+                var dir = new DirectoryInfo(d);
+                var dirName = dir.Name;
+
+                Console.WriteLine(dirName + " <DIR>");
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine("        " + $"{drive.TotalSize}" + " bytes");
+            Console.WriteLine("        " + $"{drive.AvailableFreeSpace}" + " bytes free");
             Console.Write("> ");
+            try
+            {
+                Sys.FileSystem.VFS.VFSManager.CreateFile(@"0:\BootSuccess.txt");
+                Sys.FileSystem.VFS.VFSManager.DeleteFile(@"0:\BootSuccess.txt");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
 
         protected override void Run()
         {
             String prefix = "> ";
             String input = Console.ReadLine();
+
+
+
             if (input.ToLower() == "help")
             {
                 //
@@ -81,10 +117,10 @@ namespace GoOS
             else if (input.ToLower() == "sysinf")
             {
                 Console.WriteLine(" ");
-                Console.WriteLine("Goplex Studios GoOS 1.0");
+                Console.WriteLine("Goplex Studios GoOS 1.0.2");
                 Console.WriteLine("Build type: Release");
-                Console.WriteLine("Build number: 285");
-                Console.WriteLine("Build Support key: 0x8374652981");
+                Console.WriteLine("Build number: 312");
+                Console.WriteLine("Build Support key: 0x6574837632");
                 Console.WriteLine(" ");
             }
             else if (input.ToLower() == "shutdown")
@@ -107,61 +143,7 @@ namespace GoOS
             }
             else if (input.ToLower() == "gocalc")
             {
-                int firstNum;
-                int secondNum;                   //Variables for equation
-                string operation;
-                int answer;
-
-                Console.WriteLine("GoCalc 1.0");
-                Console.WriteLine("Note: can only do simple math");
-                Console.WriteLine("Press ENTER to continue");
-                Console.ReadLine();
-
-                Console.Write("Enter the first number in your basic equation: ");
-                firstNum = Convert.ToInt32(Console.ReadLine());
-
-                //User input for equation
-
-                Console.Write("Ok now enter your operation ( x , / , +, -) ");
-                operation = Console.ReadLine();
-
-                Console.Write("Now enter your second number in the basic equation: ");
-                secondNum = Convert.ToInt32(Console.ReadLine());
-                if (operation == "x")
-                {
-                    answer = firstNum * secondNum;
-                    Console.WriteLine(firstNum + " x " + secondNum + " = " + answer);
-                    Console.WriteLine("Press ENTER to continue");
-                    Console.ReadLine();
-                }
-                else if (operation == "/")
-                {
-                    answer = firstNum / secondNum;
-                    Console.WriteLine(firstNum + " / " + secondNum + " = " + answer);
-                    Console.WriteLine("Press ENTER to continue");
-                    Console.ReadLine();
-                }
-                //Getting answers
-                else if (operation == "+")
-                {
-                    answer = firstNum + secondNum;
-                    Console.WriteLine(firstNum + " + " + secondNum + " = " + answer);
-                    Console.WriteLine("Press ENTER to continue");
-                    Console.ReadLine();
-                }
-                else if (operation == "-")
-                {
-                    answer = firstNum - secondNum;
-                    Console.WriteLine(firstNum + " - " + secondNum + " = " + answer);
-                    Console.WriteLine("Press ENTER to continue");
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("Sorry that is not correct format! Please restart!");     //Catch
-                    Console.WriteLine("Press ENTER to continue");
-                    Console.ReadLine();
-                }
+                Console.Write("Disabled.");
             }
             else
             {

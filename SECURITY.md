@@ -1,4 +1,9 @@
-# Security Policy
+# Security Policy#
+
+## Reporting a Vulnerability
+
+If you spot something out of place or something that may cause issues within GoOS itself, please report it into Issues
+OR report it to the Discord server. https://www.dsc.gg/Goplex
 
 ## Supported Versions
 
@@ -12,7 +17,3 @@ currently being supported with security updates.
 | V1.0.0   | :white_check_mark: | 20/06/2021  |
 | DevR     | :x:                | 15/06/2021  |
 
-## Reporting a Vulnerability
-
-If you spot something out of place or something that may cause issues within GoOS itself, please report it into Issues
-OR report it to the Discord server. https://www.dsc.gg/Goplex
