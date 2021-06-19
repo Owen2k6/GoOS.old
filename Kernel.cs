@@ -8,7 +8,9 @@ using Cosmos.System.FileSystem;
 using Cosmos.System.FileSystem.VFS;
 using Cosmos.Debug.Kernel;
 using Cosmos.HAL.Drivers.PCI.Video;
+using Cosmos.System.Network;
 using System.IO;
+
 
 namespace GoOS
 {
