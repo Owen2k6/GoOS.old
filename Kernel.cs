@@ -220,13 +220,13 @@ namespace GoOS
             {
                 Console.WriteLine("Formatting system");
                 Console.WriteLine("NOTE!!! all options are cAsE sensitive");
-                Console.WriteLine("Drive ID (System Drive = 0");
+                Console.WriteLine("Drive ID (System Drive = 0)");
                 var Drive = Console.ReadLine();
                 Console.WriteLine("File System (FAT32 ONLY.)");
                 var Format = Console.ReadLine();
                 Console.WriteLine("Fast Formatting? true or false");
                 var FFMT = Console.ReadLine();
-                fs.Format(Drive, Format, true);
+                fs.Format(@"0:\", Format, true);
                 Console.WriteLine("Format Complete!");
             }
             else
