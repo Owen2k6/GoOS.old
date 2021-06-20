@@ -166,7 +166,7 @@ namespace GoOS
             {
                 Console.WriteLine("System shutting down...");
                 Console.WriteLine("Goodbye!");
-                Stop();
+                Cosmos.System.Power.Shutdown();
             }
             else if (input.ToLower() == "support")
             {
