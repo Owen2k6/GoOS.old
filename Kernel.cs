@@ -179,7 +179,7 @@ namespace GoOS
             else if (input.ToLower() == "gocalc")
             {
                 Console.Write("Disabled.");
-                
+
             }
             else if (input.ToLower() == "dir")
             {
@@ -215,6 +215,7 @@ namespace GoOS
                     Console.WriteLine(e.ToString());
                 }
             }
+
             else
             {
                 Console.WriteLine("sorry, but `" + input + "` is not a command");
