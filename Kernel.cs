@@ -67,7 +67,7 @@ namespace GoOS
             }
             try
             {
-                File.WriteAllText(@"0:\GOOSE.GOOSE", "Working on this file. will have use in the future!");
+                File.WriteAllText(@"0:\GOOSE.GOOSE", "GoOS Enviorment has not been implimented yet... we are working to make an Operating Enviorment, but its not our main focus.");
             }
             catch (Exception e)
             {
@@ -76,18 +76,16 @@ namespace GoOS
             Console.Clear();
             Cosmos.HAL.Global.TextScreen.SetColors(ConsoleColor.Black, ConsoleColor.White);
             Console.WriteLine("   Goplex Studios - GoOS");
-            Console.WriteLine("   Version 1.1");
+            Console.WriteLine("   Version 1.1.1");
             Console.WriteLine("   ");
             Console.WriteLine("   Type HELP for a list of commands");
             Console.WriteLine("   Type SUPPORT for support links...");
             Console.WriteLine(" ");
             var drive = new DriveInfo("0");
-            Console.WriteLine("Volume in drive 0 is " + $"{drive.VolumeLabel}");
-            Console.WriteLine("Directory of " + @"0:\");
-            Console.WriteLine("\n");
-            Console.WriteLine("\n");
-            Console.WriteLine("        " + $"{drive.TotalSize}" + " bytes");
-            Console.WriteLine("        " + $"{drive.AvailableFreeSpace}" + " bytes free");
+            Console.WriteLine("   Volume in drive 0 is " + $"{drive.VolumeLabel}");
+            Console.WriteLine("   Drive " + @"0:\ " + "booted successfuly!");
+            Console.WriteLine("   " + $"{drive.TotalSize}" + " bytes");
+            Console.WriteLine("   " + $"{drive.AvailableFreeSpace}" + " bytes free");
             Console.Write(@"0:\ ");
             try
             {
