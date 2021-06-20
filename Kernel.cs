@@ -122,7 +122,6 @@ namespace GoOS
                 Console.WriteLine("- shutdown - Shuts down GoOS             -");
                 Console.WriteLine("- ipconfig - shows your local ip         -");
                 Console.WriteLine("- gocalc - GoOS calculator   (Disabled)  -");
-                Console.WriteLine("- format - Format drives                 -");
                 Console.WriteLine("- dir - Shows files and folders          -");
                 Console.WriteLine("- readfile - Allows you to read files    -");
                 Console.WriteLine("------------------------------------------");
@@ -215,19 +214,6 @@ namespace GoOS
                 {
                     Console.WriteLine(e.ToString());
                 }
-            }
-            else if (input.ToLower() == "format")
-            {
-                Console.WriteLine("Formatting system");
-                Console.WriteLine("NOTE!!! all options are cAsE sensitive");
-                Console.WriteLine("Drive ID (System Drive = 0)");
-                var Drive = Console.ReadLine();
-                Console.WriteLine("File System (FAT32 ONLY.)");
-                var Format = Console.ReadLine();
-                Console.WriteLine("Fast Formatting? true or false");
-                var FFMT = Console.ReadLine();
-                fs.Format(@"0:\", Format, true);
-                Console.WriteLine("Format Complete!");
             }
             else
             {
