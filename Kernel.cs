@@ -10,23 +10,73 @@ using Cosmos.Debug.Kernel;
 using Cosmos.HAL.Drivers.PCI.Video;
 using Cosmos.System.Network;
 using System.IO;
-
+using Cosmos.System.Network.IPv4.UDP.DHCP;
+using Cosmos.System.Network.IPv4.TCP;
+using Cosmos.System.Network.Config;
+using Cosmos.HAL;
+using Cosmos.System.Network.IPv4;
+using Cosmos.System.Network.IPv4.UDP.DNS;
+using Cosmos.System.Network.IPv4.TCP.FTP;
 
 namespace GoOS
 {
     public class Kernel : Sys.Kernel
     {
         public static VGAScreen VScreen = new VGAScreen();
-        CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
+        private static readonly CosmosVFS cosmosVFS = new Sys.FileSystem.CosmosVFS();
+        private readonly Sys.FileSystem.CosmosVFS fs = cosmosVFS;
+
         protected override void BeforeRun()
         {
+            NetworkDevice nic = NetworkDevice.GetDeviceByName("eth0"); //get network device by name
+            IPConfig.Enable(nic, new Address(192, 168, 1, 69), new Address(255, 255, 255, 0), new Address(192, 168, 1, 254)); //enable IPv4 configuration
+            using (var xClient = new DHCPClient())
+            {
+                /** Send a DHCP Discover packet **/
+                //This will automatically set the IP config after DHCP response
+                xClient.SendDiscoverPacket();
+            }
+            using (var xClient = new DnsClient())
+            {
+                xClient.Connect(new Address(192, 168, 1, 254)); //DNS Server address
+
+                /** Send DNS ask for a single domain name **/
+                xClient.SendAsk("github.com");
+
+                /** Receive DNS Response **/
+                Address destination = xClient.Receive(); //can set a timeout value
+            }
 
             var fs = new Sys.FileSystem.CosmosVFS();
             Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
+            try
+            {
+                var file_stream = File.Create(@"0:\GOOSE.GOOSE");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            try
+            {
+                var file_stream = File.Create(@"0:\Networking.GOOSE");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            try
+            {
+                File.WriteAllText(@"0:\GOOSE.GOOSE", "Working on this file. will have use in the future!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
             Console.Clear();
             Cosmos.HAL.Global.TextScreen.SetColors(ConsoleColor.Black, ConsoleColor.White);
             Console.WriteLine("   Goplex Studios - GoOS");
-            Console.WriteLine("   Version 1.0.2");
+            Console.WriteLine("   Version 1.1");
             Console.WriteLine("   ");
             Console.WriteLine("   Type HELP for a list of commands");
             Console.WriteLine("   Type SUPPORT for support links...");
@@ -70,8 +120,11 @@ namespace GoOS
                 Console.WriteLine("- clear - clears the text                -");
                 Console.WriteLine("- sysinf - Shows system info             -");
                 Console.WriteLine("- shutdown - Shuts down GoOS             -");
-                Console.WriteLine("- whatsnew - shows all new features      -");
-                Console.WriteLine("- gocalc - GoOS calculator               -");
+                Console.WriteLine("- ipconfig - shows your local ip         -");
+                Console.WriteLine("- gocalc - GoOS calculator   (Disabled)  -");
+                Console.WriteLine("- format - Format drives                 -");
+                Console.WriteLine("- dir - Shows files and folders          -");
+                Console.WriteLine("- readfile - Allows you to read files    -");
                 Console.WriteLine("------------------------------------------");
                 Console.WriteLine(" ");
                 //
@@ -106,9 +159,9 @@ namespace GoOS
             else if (input.ToLower() == "sysinf")
             {
                 Console.WriteLine(" ");
-                Console.WriteLine("Goplex Studios GoOS 1.0.2");
+                Console.WriteLine("Goplex Studios GoOS 1.1");
                 Console.WriteLine("Build type: Release");
-                Console.WriteLine("Build number: 1012");
+                Console.WriteLine("Build number: 1305");
                 Console.WriteLine("Build Support key: 0x6574837632");
                 Console.WriteLine(" ");
             }
@@ -123,12 +176,6 @@ namespace GoOS
                 Console.WriteLine("Discord: https://dsc.gg/goplex");
                 Console.WriteLine("type the link into the VM host webbrowser");
                 Console.WriteLine("if your running the os as your active OS, please stick to using VMs until we have a stable mainframe.");
-            }
-            else if (input.ToLower() == "whatsnew")
-            {
-                Console.WriteLine("Yo there user! welcome to GoOS 1.0");
-                Console.WriteLine("Whats new? well heres a list:");
-                Console.WriteLine("- First public release. its all new!");
             }
             else if (input.ToLower() == "gocalc")
             {
@@ -151,6 +198,36 @@ namespace GoOS
                     Console.WriteLine(dirName + " <DIR>");
                 }
 
+            }
+            else if (input.ToLower() == "ipconfig")
+            {
+                Console.WriteLine(NetworkConfig.CurrentConfig.Value.IPAddress.ToString());
+            }
+            else if (input.ToLower() == "readfile")
+            {
+                Console.WriteLine("Path to file");
+                var FTR = Console.ReadLine();
+                try
+                {
+                    Console.WriteLine(File.ReadAllText(FTR));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+            }
+            else if (input.ToLower() == "format")
+            {
+                Console.WriteLine("Formatting system");
+                Console.WriteLine("NOTE!!! all options are cAsE sensitive");
+                Console.WriteLine("Drive ID (System Drive = 0");
+                var Drive = Console.ReadLine();
+                Console.WriteLine("File System (FAT32 ONLY.)");
+                var Format = Console.ReadLine();
+                Console.WriteLine("Fast Formatting? true or false");
+                var FFMT = Console.ReadLine();
+                fs.Format(Drive, Format, true);
+                Console.WriteLine("Format Complete!");
             }
             else
             {
