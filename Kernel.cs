@@ -218,7 +218,7 @@ namespace GoOS
                     Console.WriteLine(e.ToString());
                 }
             }
-            else if (input.ToLower().IndexOf("calculate ") <> -1)
+            else if (input.ToLower().IndexOf("calculate ") != -1)
             {
                 string[] firststring = input.ToLower().Split("calculate ");
                 string[] secondstring = firststring[1].Split('+');
