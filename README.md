@@ -24,12 +24,12 @@ More to come...
 
 # whats planned to be added in the future?
 
-- working GUI
+- working GUI :x:
  
-- internet access
+- internet access :x:
 
-- working video player
+- working video player :x:
 
-- more than 256 colours
+- more than 256 colours :x:
 
-- proper driver support
+- proper driver support :x:
