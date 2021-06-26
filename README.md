@@ -3,14 +3,8 @@ GoOS is just a simple operating system that is completely text based as of now..
 
 
 # What can it do?
-- Calculate
 
-- read commands
-
-- show shapes as a UI...
-
-
-More to come...
+Being updated to meet current features...
 
 # Who has helped put this thing together?
 
