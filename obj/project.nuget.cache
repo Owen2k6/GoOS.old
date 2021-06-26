@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7kj/ShgydS+9+mneUzUpmKI++tAyzzPgVTGL8NHl4Optp7lbUNNn/L89NxuhaH8iR9HVuboyuu38ljh1Yv9woQ==",
+  "dgSpecHash": "GpYPPSZnPipJ29zSIe8kAt6N5aTO+5DV4krlgSo49+2sLxRkkBlWlFaI4G45fVVdymkC6om8xS5Sf5nscnrNzQ==",
   "success": true,
   "projectFilePath": "D:\\Users\\ybeny\\source\\repos\\GoOS\\GoOS\\GoOS.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\ybeny\\.nuget\\packages\\cosmos.hal2\\0.1.0-localbuild20210615051228\\cosmos.hal2.0.1.0-localbuild20210615051228.nupkg.sha512",
     "C:\\Users\\ybeny\\.nuget\\packages\\cosmos.system2\\0.1.0-localbuild20210615051228\\cosmos.system2.0.1.0-localbuild20210615051228.nupkg.sha512",
     "C:\\Users\\ybeny\\.nuget\\packages\\il2cpu.api\\0.1.0-localbuild20210615051228\\il2cpu.api.0.1.0-localbuild20210615051228.nupkg.sha512",
+    "C:\\Users\\ybeny\\.nuget\\packages\\managedsoftwareexecution\\1.2.2\\managedsoftwareexecution.1.2.2.nupkg.sha512",
     "C:\\Users\\ybeny\\.nuget\\packages\\microsoft.netcore.app\\2.0.9\\microsoft.netcore.app.2.0.9.nupkg.sha512",
     "C:\\Users\\ybeny\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.0.9\\microsoft.netcore.dotnetapphost.2.0.9.nupkg.sha512",
     "C:\\Users\\ybeny\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.0.9\\microsoft.netcore.dotnethostpolicy.2.0.9.nupkg.sha512",
@@ -22,5 +23,16 @@
     "C:\\Users\\ybeny\\.nuget\\packages\\runtime.win-x86.microsoft.netcore.dotnethostpolicy\\2.0.9\\runtime.win-x86.microsoft.netcore.dotnethostpolicy.2.0.9.nupkg.sha512",
     "C:\\Users\\ybeny\\.nuget\\packages\\runtime.win-x86.microsoft.netcore.dotnethostresolver\\2.0.9\\runtime.win-x86.microsoft.netcore.dotnethostresolver.2.0.9.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ManagedSoftwareExecution 1.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ManagedSoftwareExecution",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

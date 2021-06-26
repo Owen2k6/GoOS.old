@@ -66,6 +66,10 @@
                 "NU1604"
               ]
             },
+            "ManagedSoftwareExecution": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",

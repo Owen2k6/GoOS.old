@@ -82,6 +82,15 @@
           "lib/netstandard2.0/IL2CPU.API.dll": {}
         }
       },
+      "ManagedSoftwareExecution/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/MSE.dll": {}
+        },
+        "runtime": {
+          "lib/MSE.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.0.9": {
         "type": "package",
         "dependencies": {
@@ -357,6 +366,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/IL2CPU.API.dll": {}
+        }
+      },
+      "ManagedSoftwareExecution/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/MSE.dll": {}
+        },
+        "runtime": {
+          "lib/MSE.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.9": {
@@ -949,6 +967,18 @@
         "il2cpu.api.0.1.0-localbuild20210615051228.nupkg.sha512",
         "il2cpu.api.nuspec",
         "lib/netstandard2.0/IL2CPU.API.dll"
+      ]
+    },
+    "ManagedSoftwareExecution/1.2.2": {
+      "sha512": "zq0DxYX18iOhePdrGjzqsVOKwYwUbqbhOrojrR7evTYUOGnVn26zMydrajncaP21hJ1pa+7RgXt31E97hvi1VA==",
+      "type": "package",
+      "path": "managedsoftwareexecution/1.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MSE.dll",
+        "managedsoftwareexecution.1.2.2.nupkg.sha512",
+        "managedsoftwareexecution.nuspec"
       ]
     },
     "Microsoft.NETCore.App/2.0.9": {
@@ -1695,6 +1725,7 @@
       "Cosmos.Build >= 0.0.0-*",
       "Cosmos.Debug.Kernel >= 0.0.0-*",
       "Cosmos.System2 >= 0.0.0-*",
+      "ManagedSoftwareExecution >= 1.2.2",
       "Microsoft.NETCore.App >= 2.0.9"
     ]
   },
@@ -1764,6 +1795,10 @@
               "NU1604"
             ]
           },
+          "ManagedSoftwareExecution": {
+            "target": "Package",
+            "version": "[1.2.2, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -1789,5 +1824,17 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ManagedSoftwareExecution 1.2.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ManagedSoftwareExecution",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
