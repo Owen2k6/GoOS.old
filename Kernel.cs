@@ -218,6 +218,13 @@ namespace GoOS
                     Console.WriteLine(e.ToString());
                 }
             }
+            else if (input.ToLower().IndexOf("calculate ") <> -1)
+            {
+                string[] firststring = input.ToLower().Split("calculate ");
+                string[] secondstring = firststring[1].Split('+');
+                int finalresult = Int16.Parse(secondstring[0]) + Int16.Parse(secondstring[1]);
+                Console.WriteLine(finalresult);
+            }
 
             else
             {
