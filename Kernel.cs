@@ -19,6 +19,12 @@ using Cosmos.System.Network.IPv4.UDP.DNS;
 using Cosmos.System.Network.IPv4.TCP.FTP;
 using Cosmos.System.Emulation;
 using Cosmos;
+using Cosmos.HAL.Drivers.USB;
+using Cosmos.HAL.Drivers.PCI;
+using Cosmos.HAL.Drivers;
+using Cosmos.HAL.Network;
+using Cosmos.Common.Extensions;
+using Cosmos.Common;
 using Cosmos.Core.Memory;
 using Cosmos.Core.IOGroup;
 
