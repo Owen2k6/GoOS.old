@@ -18,6 +18,9 @@ using Cosmos.System.Network.IPv4;
 using Cosmos.System.Network.IPv4.UDP.DNS;
 using Cosmos.System.Network.IPv4.TCP.FTP;
 using Cosmos.System.Emulation;
+using Cosmos;
+using Cosmos.Core.Memory;
+using Cosmos.Core.IOGroup;
 
 namespace GoOS
 {
