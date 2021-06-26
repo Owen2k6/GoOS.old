@@ -26,6 +26,7 @@ namespace GoOS
         private static readonly CosmosVFS cosmosVFS = new Sys.FileSystem.CosmosVFS();
         private readonly Sys.FileSystem.CosmosVFS fs = cosmosVFS;
 
+
         protected override void BeforeRun()
         {
             NetworkDevice nic = NetworkDevice.GetDeviceByName("eth0"); //get network device by name
