@@ -224,6 +224,18 @@ namespace GoOS
                     Console.WriteLine(e.ToString());
                 }
             }
+            else if (input.ToLower() == "createfile")
+            {
+                Console.WriteLine("Path (Path must exist. )");
+                try
+                {
+                    Console.WriteLine(File.ReadAllText(FTR));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+            }
             else if (input.ToLower().IndexOf("add ") != -1) //Addition
             {
                 string[] firststring = input.ToLower().Split("add ");
