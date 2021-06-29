@@ -32,3 +32,7 @@ GoOS is just a simple operating system that is completely text based as of now..
 - more than 256 colours :x:
 
 - proper driver support :x:
+
+- application centre :x:
+
+- packagemanager :x:
