@@ -4,7 +4,12 @@ GoOS is just a simple operating system that is completely text based as of now..
 
 # What can it do?
 
-Being updated to meet current features...
+- it can add!
+- it can read text documents!
+- it can write documents!
+- it can save documents!
+- it can see its directories!
+- it has internet support!
 
 # Who has helped put this thing together?
 
