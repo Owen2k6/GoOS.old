@@ -16,6 +16,16 @@
     {
       "code": "NU1101",
       "level": "Error",
+      "message": "Unable to find package Cosmos.Build. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Cosmos.Build",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0",
+        ".NETCoreApp,Version=v2.0/cosmos"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
       "message": "Unable to find package Cosmos.Debug.Kernel. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
       "libraryId": "Cosmos.Debug.Kernel",
       "targetGraphs": [
@@ -28,16 +38,6 @@
       "level": "Error",
       "message": "Unable to find package Cosmos.System2. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
       "libraryId": "Cosmos.System2",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0",
-        ".NETCoreApp,Version=v2.0/cosmos"
-      ]
-    },
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package Cosmos.Build. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
-      "libraryId": "Cosmos.Build",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0",
         ".NETCoreApp,Version=v2.0/cosmos"
