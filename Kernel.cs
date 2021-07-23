@@ -226,6 +226,7 @@ namespace GoOS
             }
             else if (input.ToLower() == "createfile")
             {
+                var FTR = Console.ReadLine();
                 Console.WriteLine("Path (Path must exist. )");
                 try
                 {

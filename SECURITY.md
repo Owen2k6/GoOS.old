@@ -12,9 +12,10 @@ currently being supported with security updates.
 
 | Version  | Supported          | Until       |
 | -------  | ------------------ | ------------|
-| V1.1     | :white_check_mark: | 15/07/2021  |
-| V1.0.2   | :white_check_mark: | 05/07/2021  |
-| V1.0.1   | :white_check_mark: | 01/07/2021  |
+| VNext    | :white_check_mark: | ??/??/????  |
+| V1.1     | :x:                | 15/07/2021  |
+| V1.0.2   | :x:                | 05/07/2021  |
+| V1.0.1   | :x:                | 01/07/2021  |
 | V1.0.0   | :x:                | 20/06/2021  |
 | DevR     | :x:                | 15/06/2021  |
 
