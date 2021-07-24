@@ -88,6 +88,7 @@
         <PXE_Name>VMware User 001</PXE_Name>
         <PXE_VMwareEdition>Workstation</PXE_VMwareEdition>
         <ISO_Name>VMware User 001</ISO_Name>
+        <ISOFile>bin\Debug\netcoreapp2.0\cosmos\GoOS.iso</ISOFile>
     </PropertyGroup>
 
     <PropertyGroup>
