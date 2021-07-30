@@ -167,10 +167,10 @@ namespace GoOS
             else if (input.ToLower() == "sysinf")
             {
                 Console.WriteLine(" ");
-                Console.WriteLine("Goplex Studios GoOS 1.1");
+                Console.WriteLine("Goplex Studios GoOS 1.1.1");
                 Console.WriteLine("Build type: Release");
-                Console.WriteLine("Build number: 1305");
-                Console.WriteLine("Build Support key: 0x6574837632");
+                Console.WriteLine("Build number: 1512");
+                Console.WriteLine("Build Support key: 0x9364758789");
                 Console.WriteLine(" ");
             }
             else if (input.ToLower() == "shutdown")
@@ -187,7 +187,61 @@ namespace GoOS
             }
             else if (input.ToLower() == "gocalc")
             {
-                Console.Write("Disabled.");
+                float firstNum;
+                float secondNum;                   //Variables for equation
+                string operation;
+                float answer;
+
+                Console.WriteLine("GoCalc 1.0");
+                Console.WriteLine("Note: can only do simple math");
+                Console.WriteLine("Press ENTER to continue");
+                Console.ReadLine();
+
+                Console.Write("Enter the first number in your basic equation: ");
+                firstNum = Convert.ToInt32(Console.ReadLine());
+
+                //User input for equation
+
+                Console.Write("Ok now enter your operation ( x , / , +, -) ");
+                operation = Console.ReadLine();
+
+                Console.Write("Now enter your second number in the basic equation: ");
+                secondNum = Convert.ToInt32(Console.ReadLine());
+                if (operation == "x")
+                {
+                    answer = firstNum * secondNum;
+                    Console.WriteLine(firstNum + " x " + secondNum + " = " + answer);
+                    Console.WriteLine("Press ENTER to continue");
+                    Console.ReadLine();
+                }
+                else if (operation == "/")
+                {
+                    answer = firstNum / secondNum;
+                    Console.WriteLine(firstNum + " / " + secondNum + " = " + answer);
+                    Console.WriteLine("Press ENTER to continue");
+                    Console.ReadLine();
+                }
+                //Getting answers
+                else if (operation == "+")
+                {
+                    answer = firstNum + secondNum;
+                    Console.WriteLine(firstNum + " + " + secondNum + " = " + answer);
+                    Console.WriteLine("Press ENTER to continue");
+                    Console.ReadLine();
+                }
+                else if (operation == "-")
+                {
+                    answer = firstNum - secondNum;
+                    Console.WriteLine(firstNum + " - " + secondNum + " = " + answer);
+                    Console.WriteLine("Press ENTER to continue");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Sorry that is not correct format! Please restart!");     //Catch
+                    Console.WriteLine("Press ENTER to continue");
+                    Console.ReadLine();
+                }
 
             }
             else if (input.ToLower() == "dir")
