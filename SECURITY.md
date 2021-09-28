@@ -3,7 +3,7 @@
 ## Reporting a Vulnerability
 
 If you spot something out of place or something that may cause issues within GoOS itself, please report it into Issues
-OR report it to the Discord server. https://www.dsc.gg/Goplex
+OR report it to the Discord server. https://discord.gg/3tex5G8Grp
 
 ## Supported Versions
 
